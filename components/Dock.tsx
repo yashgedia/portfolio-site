@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { AppID } from '../types';
-import { Folder, Compass, Terminal, Calculator, Settings, Image, Gamepad2, StickyNote, ChevronDown, ChevronUp } from 'lucide-react';
+import { Folder, Compass, Terminal, Calculator, Settings, Image, Gamepad2, StickyNote, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 
 interface DockProps {
   openApp: (id: AppID) => void;
@@ -14,6 +14,7 @@ export const Dock: React.FC<DockProps> = ({ openApp, isDarkMode }) => {
   const apps = [
     { id: AppID.FINDER, icon: Folder, label: 'Finder', color: 'text-blue-500', bg: 'bg-blue-100' },
     { id: AppID.SAFARI, icon: Compass, label: 'Safari', color: 'text-blue-600', bg: 'bg-white' },
+    { id: AppID.BLOG, icon: BookOpen, label: 'DevLog', color: 'text-orange-500', bg: 'bg-orange-50' },
     { id: AppID.TERMINAL, icon: Terminal, label: 'Terminal', color: 'text-black', bg: 'bg-gray-800' },
     { id: AppID.NOTES, icon: StickyNote, label: 'Notes', color: 'text-yellow-500', bg: 'bg-yellow-100' },
     { id: AppID.TIC_TAC_TOE, icon: Gamepad2, label: 'Tic Tac Toe', color: 'text-purple-500', bg: 'bg-purple-100' },

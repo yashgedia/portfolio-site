@@ -13,6 +13,7 @@ import { Photos } from './components/apps/Photos';
 import { Safari } from './components/apps/Safari';
 import { TicTacToe } from './components/apps/TicTacToe';
 import { Notes } from './components/apps/Notes';
+import { Blog } from './components/apps/Blog';
 import { DataProvider } from './contexts/DataContext';
 import { Apple } from 'lucide-react';
 
@@ -80,6 +81,7 @@ const AppContent = () => {
     if (id === AppID.CALCULATOR) appSize = { width: 320, height: 480 };
     if (id === AppID.TIC_TAC_TOE) appSize = { width: 400, height: 500 };
     if (id === AppID.NOTES) appSize = { width: 400, height: 500 };
+    if (id === AppID.BLOG) appSize = { width: 850, height: 600 };
 
     const centerPos = isMobile 
         ? { x: 0, y: 0 } 
@@ -138,6 +140,7 @@ const AppContent = () => {
       case AppID.SAFARI: return 'Safari';
       case AppID.TIC_TAC_TOE: return 'Tic Tac Toe';
       case AppID.NOTES: return 'Notes';
+      case AppID.BLOG: return 'DevLog';
       default: return 'App';
     }
   };
@@ -152,6 +155,7 @@ const AppContent = () => {
       case AppID.SAFARI: return <Safari isDarkMode={isDarkMode} initialUrl={windowState.data?.initialUrl} />;
       case AppID.TIC_TAC_TOE: return <TicTacToe />;
       case AppID.NOTES: return <Notes />;
+      case AppID.BLOG: return <Blog />;
       default: return <div className="p-4">App Content Not Found</div>;
     }
   };

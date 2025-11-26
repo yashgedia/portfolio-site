@@ -8,6 +8,7 @@ export enum AppID {
   PHOTOS = 'photos',
   TIC_TAC_TOE = 'tictactoe',
   NOTES = 'notes',
+  BLOG = 'blog',
 }
 
 export interface WindowState {

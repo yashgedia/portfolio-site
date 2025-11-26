@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { YASH_DATA as DEFAULT_DATA } from '../constants';
 
@@ -11,7 +10,7 @@ interface DataContextType {
 
 const DataContext = createContext<DataContextType | null>(null);
 
-export const DataProvider = ({ children }: { children: ReactNode }) => {
+export const DataProvider = ({ children }: { children?: ReactNode }) => {
   // Initialize state from LocalStorage if available, otherwise use defaults
   const [data, setData] = useState(() => {
     try {
